@@ -53,11 +53,11 @@ class Weather:
 
         if weather_info['cod'] == 200:
 
-            temp = int((weather_info['main']['temp'] - 273) * 9 / 5 + 32)  # converting default kelvin value to Celcius
-            feels_like_temp = int((weather_info['main']['feels_like'] - 273) * 9 / 5 + 32)
+            temp = int((weather_info['main']['temp'] - 273) * 9 / 5 + 32)  #kelvin to f
+            feels_like_temp = int((weather_info['main']['feels_like'] - 273) * 9 / 5 + 32) #kelvin to f
             pressure = weather_info['main']['pressure']
             humidity = weather_info['main']['humidity']
-            wind_speed = weather_info['wind']['speed'] * 3.6
+            wind_speed = weather_info['wind']['speed'] * 3.6 #m/s to km/h
             clouds = weather_info['clouds']['all']
             sunrise = weather_info['sys']['sunrise']
             sunset = weather_info['sys']['sunset']
